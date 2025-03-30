@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        background-color: #ffe6f2;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        overflow: hidden; /* Prevent scrollbars from appearing */
+      }
+
+      .container {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+        position: relative; /* For positioning falling elements */
+      }
+
+      h1 {
+        color: #ff69b4;
+        font-size: 2.5em;
+        margin: 20px 0;
+      }
+
+      p {
+        font-size: 1.5em;
+        color: #ff1493;
+      }
+
+      .btn a {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      /* Crying Emoji */
+      .crying-emoji {
+        font-size: 50px;
+        position: absolute;
+        right: 20px; /* Move emoji to the right */
+        top: 20%;
+        cursor: pointer; /* Change cursor to pointer on hover */
+      }
+
+      /* Pop-up Message */
+      .popup-message {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+        font-size: 24px;
+        color: #ff1493;
+        display: none; /* Hidden by default */
+        animation: fall 3s forwards; /* Add falling animation */
+      }
+
+      @keyframes fall {
+        0% {
+          top: -10%;
+          opacity: 1;
+        }
+        100% {
+          top: 50%; /* Adjust this value to control where the message falls */
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="15195810"
+        data-share-method="host"
+        data-aspect-ratio="1"
+        data-width="100%"
+      >
+        <a
+          href="https://tenor.com/view/couple-forgive-me-asking-for-forgiveness-begging-crying-gif-15195810"
+          >Couple Forgive Me Sticker</a
+        > from
+        <a href="https://tenor.com/search/couple-stickers">Couple Stickers</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+
+      <h1>Why you keep choosing NO!!😣</h1>
+      <p>Just click YES na LOVEE LOVEE😣</p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no3.html">No</a>
+      </div>
+
+      <!-- Crying Emoji -->
+      <div class="crying-emoji" onclick="showPopup()">😢</div>
+
+      <!-- Pop-up Message -->
+      <div class="popup-message" id="popupMessage">Please don't leave me!</div>
+    </div>
+
+    <script>
+      function showPopup() {
+        const popup = document.getElementById('popupMessage');
+        popup.style.display = 'block'; // Show the pop-up message
+
+        // Randomly position the pop-up message on the left or right
+        const randomPosition = Math.random() < 0.5 ? 'left' : 'right';
+        if (randomPosition === 'left') {
+          popup.style.left = '10%'; // Position on the left
+          popup.style.transform = 'translateX(0)'; // Reset transform for left position
+        } else {
+          popup.style.left = '90%'; // Position on the right
+          popup.style.transform = 'translateX(-100%)'; // Adjust transform for right position
+        }
+
+        // Set a timeout to hide the message after falling
+        setTimeout(() => {
+          popup.style.display = 'none'; // Hide the message after falling
+        }, 3000); // Match this with the animation duration
+      }
+    </script>
+  </body>
+</html>

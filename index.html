@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        background-color: #ffe6f2;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        overflow: hidden; /* Prevent scrollbars from appearing */
+      }
+
+      .container {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+        position: relative; /* For positioning falling stars */
+      }
+
+      h1 {
+        color: #ff69b4;
+        font-size: 2.5em;
+        margin: 20px 0;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #ff1493;
+      }
+
+      .btn a {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      /* Balloon Animation */
+      .balloon {
+        position: absolute;
+        width: 50px;
+        animation: float 5s infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      /* Cat Animation */
+      .cat {
+        position: absolute;
+        width: 100px;
+        animation: slide 10s infinite;
+      }
+
+      @keyframes slide {
+        0% {
+          left: -100px;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      /* Corner Images */
+      .corner-image {
+        position: absolute;
+        width: 50px; /* Adjust size as needed */
+      }
+
+      .top-left {
+        top: 10px;
+        left: 10px;
+      }
+
+      .top-right {
+        top: 10px;
+        right: 10px;
+      }
+
+      .bottom-left {
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .bottom-right {
+        bottom: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="22885016"
+        data-share-method="host"
+        data-aspect-ratio="1.04918"
+        data-width="100%"
+      >
+        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a
+        > from
+        <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      <h1>Do you love me? 🤗</h1>
+      <p>~PLSS SAY YESSS! 💖</p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no1.html">No</a>
+      </div>
+
+      <!-- Add balloons -->
+      <div class="balloon" style="left: 10%; animation-delay: 0s;">
+        🎈
+      </div>
+      <div class="balloon" style="left: 30%; animation-delay: 1s;">
+        🎈
+      </div>
+      <div class="balloon" style="left: 50%; animation-delay: 2s;">
+        🎈
+      </div>
+      <div class="balloon" style="left: 70%; animation-delay: 3s;">
+        🎈
+      </div>
+      <div class="balloon" style="left: 90%; animation-delay: 4s;">
+        🎈
+      </div>
+
+      <!-- Add cat -->
+      <div class="cat" style="top: 50%;">
+        🐱
+      </div>
+
+           <!-- Corner Images -->
+           <img src="cat1.jpg" alt="Image 1" class="corner-image top-left" />
+           <img src="cat2.jpg" alt="Image 2" class="corner-image top-right" />
+           <img src="cat3.jpg" alt="Image 3" class="corner-image bottom-left" />
+           <img src="cat4.jpg" alt="Image 4" class="corner-image bottom-right" />
+         </div>
+       </body>
+     </html>

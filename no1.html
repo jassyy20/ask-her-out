@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        background-color: #ffe6f2;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        overflow: hidden; /* Prevent scrollbars from appearing */
+      }
+
+      .container {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+        position: relative; /* For positioning falling elements */
+      }
+
+      h1 {
+        color: #ff69b4;
+        font-size: 2.5em;
+        margin: 20px 0;
+      }
+
+      p {
+        font-size: 1.5em;
+        color: #ff1493;
+      }
+
+      .btn a {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      /* Crying Emoji */
+      .crying-emoji {
+        font-size: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20%;
+        cursor: pointer; /* Change cursor to pointer on hover */
+      }
+
+      /* Falling Effect */
+      .falling {
+        position: absolute;
+        font-size: 30px;
+        animation: fall 3s forwards;
+      }
+
+      @keyframes fall {
+        0% {
+          top: -10%;
+          opacity: 1;
+        }
+        100% {
+          top: 100%;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="22050818"
+        data-share-method="host"
+        data-aspect-ratio="1"
+        data-width="100%"
+      >
+        <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a
+        > from
+        <a href="https://tenor.com/search/mochi-stickers">Mochi Stickers</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      <h1>Please think again! 🙄</h1>
+      <p>PLSSS SAYY YESS BABYY😥</p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no2.html">No</a>
+      </div>
+
+      <!-- Crying Emoji -->
+      <div class="crying-emoji" onclick="fallMoreEmojis()">😢</div>
+
+      <!-- Initial Falling Sad Emojis -->
+      <div class="falling" style="left: 20%;">😢</div>
+      <div class="falling" style="left: 40%; animation-delay: 0.5s;">😢</div>
+      <div class="falling" style="left: 60%; animation-delay: 1s;">😢</div>
+      <div class="falling" style="left: 80%; animation-delay: 1.5s;">😢</div>
+    </div>
+
+    <script>
+      function fallMoreEmojis() {
+        for (let i = 0; i < 5; i++) {
+          const sadEmoji = document.createElement('div');
+          sadEmoji.className = 'falling';
+          sadEmoji.innerHTML = '😢';
+          sadEmoji.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+          sadEmoji.style.animationDelay = Math.random() * 2 + 's'; // Random delay for falling
+          document.body.appendChild(sadEmoji);
+
+          // Remove sad emoji after animation
+          setTimeout(() => {
+            sadEmoji.remove();
+          }, 3000); // Match this with the animation duration
+        }
+      }
+    </script>
+  </body>
+</html>
